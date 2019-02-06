@@ -25,22 +25,7 @@ var devicePixelRatio = (function() {
 var utils = {
 	// @todo move this in Chart.helpers.toTextLines
 	toTextLines: function(inputs) {
-		var lines = [];
-		var input;
-
-		inputs = [].concat(inputs);
-		while (inputs.length) {
-			input = inputs.pop();
-			if (typeof input === 'string') {
-				lines.unshift.apply(lines, input.split('\n'));
-			} else if (Array.isArray(input)) {
-				inputs.push.apply(inputs, input);
-			} else if (!helpers.isNullOrUndef(inputs)) {
-				lines.unshift('' + input);
-			}
-		}
-
-		return lines;
+		return inputs;
 	},
 
 	// @todo move this method in Chart.helpers.canvas.toFont (deprecates helpers.fontString)

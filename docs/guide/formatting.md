@@ -78,14 +78,20 @@ globalLabels[context.dataIndex];                // labels store outside the char
 
 ## Multiline Labels
 
-Labels can be displayed on multiple lines by using the newline character (`\n`) between each line or by providing an array of strings where each item represents a new line.
+Labels can be displayed on multiple lines by providing an array of objects where each object represents a new line. Each line object has a `text` and `color` property. If the color property is not defined, the color will be inherited from the `color` property of the main datalabels options object.
 
 Example:
 
 ```javascript
 formatter: function(value) {
-    return 'line1\nline2\n' + value;
-    // eq. return ['line1', 'line2', value]
+    return [
+        {
+            text: 'line1',
+            color: 'blue'
+        },
+        { text: 'line2' },
+        { text: 'line3' }
+    ];
 }
 ```
 
