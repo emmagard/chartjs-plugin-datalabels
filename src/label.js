@@ -119,6 +119,7 @@ function textGeometry(rect, align, font) {
 function drawTextLine(ctx, text, cfg) {
 	var shadow = ctx.shadowBlur;
 	var stroked = cfg.stroked;
+	var color = cfg.color;
 	var x = rasterize(cfg.x);
 	var y = rasterize(cfg.y);
 	var w = rasterize(cfg.w);
@@ -134,6 +135,7 @@ function drawTextLine(ctx, text, cfg) {
 			ctx.shadowBlur = 0;
 		}
 
+		ctx.fillStyle = color;
 		ctx.fillText(text, x, y, w);
 
 		if (shadow && stroked) {
@@ -176,9 +178,10 @@ function drawText(ctx, lines, rect, model) {
 	}
 
 	for (i = 0, ilen = lines.length; i < ilen; ++i) {
-		drawTextLine(ctx, lines[i], {
+		drawTextLine(ctx, lines[i].text, {
 			stroked: stroked,
 			filled: filled,
+			color: lines[i].color || color,
 			w: rect.w,
 			x: rect.x,
 			y: rect.y + rect.h * i
