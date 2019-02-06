@@ -17,7 +17,7 @@ Example:
 
 ```javascript
 formatter: function(value, context) {
-    return context.dataIndex + ': ' + Math.round(value*100) + '%';
+    return [ { text: context.dataIndex + ': ' + Math.round(value*100) + '%' } ];
 }
 
 // label for data at index 0 with value 0.23: "0: 23%"
@@ -53,7 +53,7 @@ new Chart('id', {
         plugins: {
             datalabels: {
                 formatter: function(value, context) {
-                    return context.chart.data.labels[context.dataIndex];
+                    return [ { text: context.chart.data.labels[context.dataIndex] } ];
                 }
             }
         }
