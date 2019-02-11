@@ -2,7 +2,7 @@
   "name": "chartjs-plugin-datalabels",
   "homepage": "https://chartjs-plugin-datalabels.netlify.com",
   "description": "Chart.js plugin to display labels on data elements",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "license": "MIT",
   "main": "./dist/chartjs-plugin-datalabels.js",
   "types": "./types/index.d.ts",
@@ -23,7 +23,7 @@
   ],
   "devDependencies": {
     "@types/chart.js": "^2.7.42",
-    "chart.js": "2.7.2",
+    "chart.js": "2.7.3",
     "eslint-config-chartjs": "^0.1.0",
     "gulp": "^4.0.0",
     "gulp-eslint": "^5.0.0",
