@@ -25,6 +25,7 @@ var devicePixelRatio = (function() {
 var utils = {
 	// @todo move this in Chart.helpers.toTextLines
 	toTextLines: function(inputs) {
+		inputs = [].concat(inputs);
 		return inputs;
 	},
 
@@ -44,7 +45,14 @@ var utils = {
 	// @todo move this in Chart.helpers.canvas.textSize
 	// @todo cache calls of measureText if font doesn't change?!
 	textSize: function(ctx, lines, font) {
-		var items = [].concat(lines);
+		var lineText = [];
+		var j;
+
+		for (j = 0; j < lines.length; j++) {
+			lineText.push(lines[j].text);
+		}
+
+		var items = [].concat(lineText);
 		var ilen = items.length;
 		var prev = ctx.font;
 		var width = 0;
