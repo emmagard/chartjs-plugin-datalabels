@@ -1,5 +1,5 @@
 /*!
- * chartjs-plugin-datalabels v0.5.2
+ * chartjs-plugin-datalabels v0.5.3
  * https://chartjs-plugin-datalabels.netlify.com
  * (c) 2019 Chart.js Contributors
  * Released under the MIT license
