@@ -1,5 +1,5 @@
 /*!
- * chartjs-plugin-datalabels v0.5.3
+ * chartjs-plugin-datalabels v0.5.4
  * https://chartjs-plugin-datalabels.netlify.com
  * (c) 2019 Chart.js Contributors
  * Released under the MIT license
@@ -1036,9 +1036,9 @@ var formatter = function(value) {
 				label += (k !== 0 ? ', ' : '') + keys[k] + ': ' + value[keys[k]];
 			}
 		}
-	}
+	}	
 
-	return '' + label;
+	return [{ text: '' + label, color: 'undefined' }];
 };
 
 /**
