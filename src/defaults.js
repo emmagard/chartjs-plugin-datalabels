@@ -23,9 +23,9 @@ var formatter = function(value) {
 				label += (k !== 0 ? ', ' : '') + keys[k] + ': ' + value[keys[k]];
 			}
 		}
-	}
+	}	
 
-	return '' + label;
+	return [{ text: '' + label, color: 'undefined' }];
 };
 
 /**

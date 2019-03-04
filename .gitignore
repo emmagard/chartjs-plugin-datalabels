@@ -3,8 +3,7 @@
 bower.json
 cc-test-reporter
 coverage/
-dist/chartjs-plugin-datalabels.zip
-dist/samples
+dist/
 node_modules/
 package-lock.json
 *.stackdump
